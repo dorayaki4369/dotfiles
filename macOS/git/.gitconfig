@@ -1,0 +1,26 @@
+[core]
+    editor       = vim
+    autocrlf     = input
+    safecrlf     = warn
+    excludesfile = ~/.config/git/ignore
+
+[pull]
+    rebase = false
+
+[safe]
+    directory = ~/src/github.com/dorayaki4369
+
+[init]
+    defaultBranch = main
+
+[filter "lfs"]
+    clean    = git-lfs clean -- %f
+    smudge   = git-lfs smudge -- %f
+    process  = git-lfs filter-process
+    required = true
+
+[gpg]
+    program = /opt/homebrew/bin/gpg
+
+[includeIf "gitdir:~/src/github.com/"]
+    path = ~/src/github.com/.gitconfig

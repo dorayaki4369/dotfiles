@@ -1,0 +1,80 @@
+# git ignore global
+
+###############
+# macOS files #
+###############
+
+# General macOS system files
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+########################
+# Windows system files #
+########################
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+
+######################
+# Linux system files #
+######################
+
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+#####################
+# Environment files #
+#####################
+
+.env
+.env.local
+.env.*.local
+
+.dev.vars
+.dev.vars.local
+.dev.vars.*.local
+
+
+#################
+# Claude files  #
+#################
+**/.claude/settings.local.json

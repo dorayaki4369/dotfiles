@@ -1,0 +1,6 @@
+[user]
+    name       = Ryuya Hirayama
+    email      = ryuya.hirayama@dryk.net
+
+[commit]
+    gpgsign = true
