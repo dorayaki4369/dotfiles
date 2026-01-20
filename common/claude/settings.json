@@ -1,0 +1,135 @@
+{
+  "env": {},
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(cd:*)",
+      "Bash(copilot:*)",
+      "Bash(docker ps,images)",
+      "Bash(docker compose logs:*)",
+      "Bash(docker compose ps:*)",
+      "Bash(docker network ls)",
+      "Bash(echo:*)",
+      "Bash(find:*)",
+      "Bash(git:add,blame,branch,diff,diff-tree,fetch,log,remote,show,stash,status,tag)",
+      "Bash(gh issue view:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh workflow view:*)",
+      "Bash(grep:*)",
+      "Bash(jq:*)",
+      "Bash(ls:*)",
+      "Bash(npm run build)",
+      "Bash(npm run dev)",
+      "Bash(npm run format:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm install)",
+      "Bash(npx prettier:*)",
+      "Bash(pwd:*)",
+      "Bash(sed:*)",
+      "Bash(sleep:*)",
+      "Bash(tail:*)",
+      "Bash(tee:*)",
+      "Bash(wc:*)",
+      "Bash(yq:*)",
+      "WebFetch(domain:*.amazon.com)",
+      "WebFetch(domain:*.anthropic.com)",
+      "WebFetch(domain:*.atlassian.com)",
+      "WebFetch(domain:*.cloudflare.com)",
+      "WebFetch(domain:*.dev.to)",
+      "WebFetch(domain:*.docker.com)",
+      "WebFetch(domain:*.github.com)",
+      "WebFetch(domain:*.github.io)",
+      "WebFetch(domain:*.gitlab.com)",
+      "WebFetch(domain:*.go.dev)",
+      "WebFetch(domain:*.google.com)",
+      "WebFetch(domain:*.grafana.com)",
+      "WebFetch(domain:*.hashicorp.com)",
+      "WebFetch(domain:*.jetbrains.com)",
+      "WebFetch(domain:*.laravel.com)",
+      "WebFetch(domain:*.medium.com)",
+      "WebFetch(domain:*.microsoft.com)",
+      "WebFetch(domain:*.mozilla.org)",
+      "WebFetch(domain:*.netlify.com)",
+      "WebFetch(domain:*.nodejs.org)",
+      "WebFetch(domain:*.npmjs.com)",
+      "WebFetch(domain:*.openai.com)",
+      "WebFetch(domain:*.php.net)",
+      "WebFetch(domain:*.postgresql.org)",
+      "WebFetch(domain:*.prisma.io)",
+      "WebFetch(domain:*.pypi.org)",
+      "WebFetch(domain:*.python.org)",
+      "WebFetch(domain:*.qiita.com)",
+      "WebFetch(domain:*.react.dev)",
+      "WebFetch(domain:*.readthedocs.io)",
+      "WebFetch(domain:*.reddit.com)",
+      "WebFetch(domain:*.rust-lang.org)",
+      "WebFetch(domain:*.stackoverflow.com)",
+      "WebFetch(domain:*.supabase.com)",
+      "WebFetch(domain:*.typescriptlang.org)",
+      "WebFetch(domain:*.vercel.com)",
+      "WebFetch(domain:*.vuejs.org)",
+      "WebFetch(domain:*.wikipedia.org)",
+      "WebFetch(domain:*.zenn.dev)",
+      "mcp__ide__getDiagnostics",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Read(**/*.env)",
+      "Read(**/*.dev.vars)",
+      "Read(~/.ssh/*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude Codeが許可を求めています\" with title \"Claude Code\" subtitle \"確認待ち\" sound name \"Glass\"'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\" subtitle \"処理終了\" sound name \"Hero\"'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "php-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true
+  },
+  "language": "絵文字を使うお嬢様",
+  "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "stable"
+}

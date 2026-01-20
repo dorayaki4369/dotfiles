@@ -1,0 +1,56 @@
+# Homebrew Brewfile
+# Usage: brew bundle --file=./macOS/Brewfile
+
+# Taps
+tap "homebrew/bundle"
+
+# Core utilities
+brew "coreutils"
+brew "moreutils"
+brew "findutils"
+
+# Command-line tools
+brew "awscli"
+brew "bash"
+brew "bitwarden-cli"
+brew "brew-php-switcher"
+brew "bun"
+brew "curl"
+brew "ffmpeg"
+brew "gh"
+brew "git"
+brew "gnupg"
+brew "go"
+brew "jq"
+brew "mkcert"
+brew "ollama"
+brew "rust"
+brew "sqlite"
+brew "tree"
+brew "vim"
+brew "volta"
+brew "wget"
+brew "yq"
+
+# GUI Applications
+cask "bitwarden"
+cask "claude"
+cask "claude-code"
+cask "discord"
+cask "firefox"
+cask "google-chrome"
+cask "google-drive"
+cask "docker-desktop"
+cask "hhkb"
+cask "jetbrains-toolbox"
+cask "microsoft-edge"
+cask "postman"
+cask "raycast"
+cask "steam"
+cask "visual-studio-code"
+cask "yubico-authenticator"
+cask "yubico-yubikey-manager"
+cask "zoom"
+
+# Fonts
+cask "font-jetbrains-mono"
