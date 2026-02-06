@@ -64,6 +64,34 @@ export VOLTA_FEATURE_PNPM=1
 export ENABLE_TOOL_SEARCH=true
 export CLAUDE_CODE_SYNTAX_HIGHLIGHT=off
 
+# Claude Codeをtmuxセッション内で起動するラッパー関数
+# カレントディレクトリ名を元にユニークなセッション名を作成する
+function cc() {
+    local session_name="claude-$(basename "$PWD" | sed 's/\./-/g')"
+    tmux new-session -A -s "$session_name" "claude -c"
+}
+
+################
+# yazi         #
+################
+
+# yaziで移動先のディレクトリに自動的にcdするラッパー関数
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
+
+################
+# Rancher      #
+################
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="$HOME/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
 ################
 # ローカル設定 #
 ################

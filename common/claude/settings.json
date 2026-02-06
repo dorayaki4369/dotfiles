@@ -2,6 +2,9 @@
   "env": {},
   "permissions": {
     "allow": [
+      "Edit",
+      "WebSearch",
+      "Fetch",
       "Bash(cat:*)",
       "Bash(cd:*)",
       "Bash(copilot:*)",
@@ -33,6 +36,7 @@
       "Bash(sleep:*)",
       "Bash(tail:*)",
       "Bash(tee:*)",
+      "Bash(tree:*)",
       "Bash(wc:*)",
       "Bash(yq:*)",
       "WebFetch(domain:*.amazon.com)",
@@ -62,6 +66,7 @@
       "WebFetch(domain:*.prisma.io)",
       "WebFetch(domain:*.pypi.org)",
       "WebFetch(domain:*.python.org)",
+      "WebFetch(domain:*.qdrant.tech)",
       "WebFetch(domain:*.qiita.com)",
       "WebFetch(domain:*.react.dev)",
       "WebFetch(domain:*.readthedocs.io)",
@@ -74,9 +79,9 @@
       "WebFetch(domain:*.vuejs.org)",
       "WebFetch(domain:*.wikipedia.org)",
       "WebFetch(domain:*.zenn.dev)",
+      "mcp__chrome-devtools__*",
       "mcp__ide__getDiagnostics",
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs"
+      "mcp__plugin_context7_context7__*"
     ],
     "deny": [
       "Bash(sudo:*)",
@@ -85,6 +90,7 @@
       "Read(~/.ssh/*)"
     ]
   },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -120,7 +126,7 @@
     "commit-commands@claude-plugins-official": true,
     "agent-sdk-dev@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
+    "playwright@claude-plugins-official": false,
     "php-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
@@ -130,6 +136,16 @@
     "plugin-dev@claude-plugins-official": true
   },
   "language": "絵文字を使うお嬢様",
+  "sandbox": {
+    "enabled": true,
+    "network": {
+      "allowLocalBinding": true
+    },
+    "excludedCommands": [
+      "git",
+      "docker"
+    ]
+  },
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "stable"
 }

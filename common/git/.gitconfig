@@ -24,3 +24,11 @@
 
 [includeIf "gitdir:~/src/github.com/"]
     path = ~/src/github.com/.gitconfig
+
+[credential "https://github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
