@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# macOS デフォルト設定
-# 使い方: ./macOS/defaults.sh
-# 注意: 一部の設定はログアウトまたは再起動後に反映されます
+# macOS デフォルト設定スクリプト
 
 set -eux
 
@@ -209,4 +207,3 @@ for app in "Activity Monitor" \
   killall "${app}" &> /dev/null || true
 done
 
-echo "完了しました。一部の設定はログアウトまたは再起動後に反映されます。"

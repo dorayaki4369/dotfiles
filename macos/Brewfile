@@ -1,9 +1,3 @@
-# Homebrew Brewfile
-# Usage: brew bundle --file=./macOS/Brewfile
-
-# Taps
-tap "homebrew/bundle"
-
 # Core utilities
 brew "coreutils"
 brew "moreutils"
@@ -75,6 +69,7 @@ cask "jetbrains-toolbox"
 cask "mattermost"
 cask "microsoft-edge"
 cask "microsoft-office"
+cask "obsidian"
 cask "postman"
 cask "rancher"
 cask "raycast"
